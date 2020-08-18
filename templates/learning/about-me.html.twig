@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About me{% endblock %}
+{% block menu %}
+    {{ parent() }}         {# basically acts as a copy and paste from the contents of this named block from the base twig #}
+    <p>Europe {{ date|format_datetime(pattern="d/y/M") }}</p>
+    <p> America {{ date|format_datetime(pattern="M/d/y") }}</p>
+    <p>China & Japan {{ date|format_datetime(pattern="y/M/d") }}</p>
+{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
+
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
+
+    <div class="example-wrapper">
+        <h1> About me </h1>
+
+        <h2>Hey I'm {{ name |title }} ,</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec ex vel purus pharetra blandit eget et
+            tortor. Aenean non nisl a lectus interdum suscipit. Nullam placerat nulla at sapien tempus sagittis. Aenean
+            consectetur tortor vel ligula mollis tincidunt. Mauris blandit felis vel feugiat euismod. Duis dapibus
+            commodo fringilla. Vestibulum leo massa, lobortis sed purus vel, maximus feugiat nunc. Nulla ante tellus,
+            pulvinar dignissim sagittis sed, elementum at nisi. Morbi eget lectus tempor sem elementum mattis.
+            Suspendisse convallis eu massa consequat egestas.
+
+            Cras vitae lacinia tortor. Sed tempor finibus sem, in faucibus purus ullamcorper quis. Aenean elementum mi
+            vel lorem tempor mattis. Vivamus odio tortor, iaculis in ligula a, ornare vulputate velit. Ut sit amet erat
+            nec elit tincidunt porttitor et ac elit. Ut imperdiet arcu quis nibh dictum, sit amet pulvinar nisl finibus.
+            Vivamus vel vehicula mi, id tincidunt eros. Integer suscipit pulvinar tincidunt. Mauris quis nunc quis lorem
+            vulputate scelerisque. Duis dictum, massa ullamcorper facilisis tempus, urna risus aliquam lacus, vel
+            iaculis lorem lorem a odio. Maecenas vitae tempus augue, a semper nisl. Nunc egestas ante dui. Quisque
+            hendrerit turpis ex, at tempor lorem mattis eget. Pellentesque vel nulla tortor.</p><br><br>
+        <hr>
+    </div>
+
+
+{% endblock %}
